@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.dao.impl;
 
 import com.mycompany.dao.intf.MessagesIntf;
@@ -13,10 +8,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author Taniusha
- */
 @Repository
 public class MessagesImpl implements MessagesIntf {
 
@@ -41,13 +32,13 @@ public class MessagesImpl implements MessagesIntf {
 
     @Override
     public List<Messages> findAll() {
-       Session session = this.sessionFactory.getCurrentSession();
+        Session session = this.sessionFactory.getCurrentSession();
         return session.createQuery("from Messages").list();
     }
 
     @Override
     public Messages findById(int id) {
-         Session session = this.sessionFactory.getCurrentSession();
+        Session session = this.sessionFactory.getCurrentSession();
         return (Messages) session.createQuery("from Messages where id like '" + id + "'").uniqueResult();
     }
 

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.dao.impl;
 
 import com.mycompany.model.Images;
@@ -13,9 +8,8 @@ import com.mycompany.dao.intf.ImagesIntf;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public class ImagesImpl implements ImagesIntf{
+public class ImagesImpl implements ImagesIntf {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -23,7 +17,7 @@ public class ImagesImpl implements ImagesIntf{
     public void setSessionFactory(SessionFactory sf) {
         this.sessionFactory = sf;
     }
-    
+
     @Override
     public void save(Images images) {
         this.sessionFactory.getCurrentSession().save(images);
@@ -31,7 +25,7 @@ public class ImagesImpl implements ImagesIntf{
 
     @Override
     public void update(Images image) {
-        this.sessionFactory.getCurrentSession().update(this); 
+        this.sessionFactory.getCurrentSession().update(this);
     }
 
     @Override
@@ -39,5 +33,5 @@ public class ImagesImpl implements ImagesIntf{
         Session session = this.sessionFactory.getCurrentSession();
         session.delete(image);
     }
-    
+
 }

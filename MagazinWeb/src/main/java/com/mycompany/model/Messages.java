@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.model;
 
 import javax.persistence.Column;
@@ -12,23 +7,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author Taniusha
- */
 @Entity
-@Table(name="messages")
+@Table(name = "messages")
 public class Messages {
-     @Id
+
+    @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     private int id;
-     private String nume;
-     private String email;
-     private String subiect;
-     private String mesaj;
-      private String ora;
-       private String data;
+    private int id;
+    private String nume;
+    private String email;
+    private String subiect;
+    private String mesaj;
+    private String ora;
+    private String data;
 
     public Messages() {
     }
@@ -104,6 +96,4 @@ public class Messages {
         return "Messages{" + "id=" + id + ", nume=" + nume + ", email=" + email + ", subiect=" + subiect + ", mesaj=" + mesaj + ", ora=" + ora + ", data=" + data + '}';
     }
 
-    
-     
 }

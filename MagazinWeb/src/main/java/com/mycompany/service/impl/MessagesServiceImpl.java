@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.service.impl;
 
 import com.mycompany.dao.intf.MessagesIntf;
@@ -13,12 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author Taniusha
- */
 @Service("messageService")
-public class MessagesServiceImpl implements MessagesServiceIntf{
+public class MessagesServiceImpl implements MessagesServiceIntf {
+
     @Autowired
     private MessagesIntf messagesIntf;
 

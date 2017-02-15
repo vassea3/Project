@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.controllers;
 
 import com.mycompany.model.HomeSlider;
@@ -23,10 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- *
- * @author Taniusha
- */
 @Controller
 public class HomeSliderController {
 
@@ -53,15 +44,15 @@ public class HomeSliderController {
             @RequestParam("descrierea") String descrierea, @RequestParam("reducerea") String reducerea,
             @RequestParam("file") MultipartFile file) throws IOException {
 
-               HomeSlider hS= new HomeSlider();
-               hS.setId(id);
-               hS.setTitlul(titlul);
-               hS.setDescrierea(descrierea);
-               hS.setImgName(file.getOriginalFilename());
-               hS.setReducerea(reducerea);
-               hS.setImgBytes(readByte(file));
-         this.homeSliderService.update(hS);
-         System.out.println(hS);
+        HomeSlider hS = new HomeSlider();
+        hS.setId(id);
+        hS.setTitlul(titlul);
+        hS.setDescrierea(descrierea);
+        hS.setImgName(file.getOriginalFilename());
+        hS.setReducerea(reducerea);
+        hS.setImgBytes(readByte(file));
+        this.homeSliderService.update(hS);
+        System.out.println(hS);
         return "redirect:/cmsHomeSlider?success=true";
     }
 

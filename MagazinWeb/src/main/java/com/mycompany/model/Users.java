@@ -1,4 +1,3 @@
-
 package com.mycompany.model;
 
 import javax.persistence.Column;
@@ -8,13 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author Taniusha
- */
 @Entity
 @Table(name = "Users")
 public class Users {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -99,5 +95,5 @@ public class Users {
     public String toString() {
         return "Users{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username + ", password=" + password + ", email=" + email + ", phone=" + phone + '}';
     }
-    
+
 }

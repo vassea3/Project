@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.service.impl;
 
 import com.mycompany.dao.intf.ContactPageIntf;
@@ -14,24 +9,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author Taniusha
- */
 @Service("homeSlideService")
-public class HomeSliderServiceImpl implements HomeSliderServiceIntf{
+public class HomeSliderServiceImpl implements HomeSliderServiceIntf {
 
     @Autowired
     private HomeSliderIntf homeSliderIntf;
-   
+
     public void setHomeSliderIntf(HomeSliderIntf homeSliderIntf) {
         this.homeSliderIntf = homeSliderIntf;
     }
-    
+
     @Override
     @Transactional
     public void update(HomeSlider homeSlide) {
-        this.homeSliderIntf.update(homeSlide); 
+        this.homeSliderIntf.update(homeSlide);
     }
 
     @Override
@@ -43,9 +34,7 @@ public class HomeSliderServiceImpl implements HomeSliderServiceIntf{
     @Override
     @Transactional
     public List<HomeSlider> findAll() {
-       return this.homeSliderIntf.findAll();
+        return this.homeSliderIntf.findAll();
     }
 
-    
-    
 }

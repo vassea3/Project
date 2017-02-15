@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.service.impl;
 
 import com.mycompany.dao.intf.ProductsIntf;
@@ -13,10 +8,6 @@ import com.mycompany.service.intf.ProductsServiceIntf;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author Taniusha
- */
 @Service("productsService")
 public class ProductsServiceImpl implements ProductsServiceIntf {
 
