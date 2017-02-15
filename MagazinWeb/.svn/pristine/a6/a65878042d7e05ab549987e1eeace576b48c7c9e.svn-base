@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.journaldev.spring;
+
+
+import com.journaldev.spring.model.Person;
+import org.springframework.stereotype.Component;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+
+/**
+ *
+ * @author iurasun
+ */
+@Component
+public class PersonValidator implements Validator{
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return Person.class.isAssignableFrom(clazz);
+    }
+
+    @Override
+    public void validate(Object p, Errors errors) {
+        
+       Person pp=(Person)p;
+               
+       ValidationUtils.rejectIfEmpty(errors,"name", "",  "Mesaj de eroare mare 111!" );
+       ValidationUtils.rejectIfEmpty(errors,"country", "",  "Mesaj de eroare tot mare 22222222!!!!" );
+       
+    //   validateMinMaxLungime( pp , errors);
+       
+       
+       if(pp.getCountry().length()<3 || pp.getCountry().length()>6){
+           
+           errors.rejectValue("country","", "LUngimea intre 3 si 6");
+       }
+      
+       
+     
+    
+    }
+
+//    private void validateMinMaxLungime(Person pp, Errors errors) {
+//      
+//        
+//    }
+//    
+    
+    
+}

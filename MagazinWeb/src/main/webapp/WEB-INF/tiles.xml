@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="base.clientDefinition" template="/WEB-INF/client/layout.jsp">
+        <put-attribute name="title" value="FrameworkOnly | Apache Tiles 3 + Spring 4 MVC"></put-attribute>
+        <!--<put-attribute name="stylecss" value="/WEB-INF/views/firststylecss.jsp"></put-attribute>-->
+        <put-attribute name="header" value="/WEB-INF/client/header.jsp"></put-attribute>
+        <put-attribute name="homeSlider" value=""></put-attribute>
+        <put-attribute name="leftMenu" value=""></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/client/footer.jsp"></put-attribute>
+        <!--<put-attribute name="scriptjs" value="/WEB-INF/views/firstscriptjs.jsp"></put-attribute>-->
+    </definition>
+     
+    <definition name="home" extends="base.clientDefinition">
+        <put-attribute name="title" value="Home Page"></put-attribute>
+        <put-attribute name="leftMenu" value="/WEB-INF/client/leftMenu.jsp"></put-attribute>
+        <put-attribute name="homeSlider" value="/WEB-INF/client/homeSlider.jsp"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/client/home.jsp"></put-attribute>
+    </definition>
+    <definition name="login" extends="base.clientDefinition">
+        <put-attribute name="title" value="Login Page"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/client/login.jsp"></put-attribute>
+    </definition>
+    <definition name="products" extends="base.clientDefinition">
+        <put-attribute name="title" value="Products Page"></put-attribute>
+        <put-attribute name="leftMenu" value="/WEB-INF/client/leftMenu.jsp"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/client/products.jsp"></put-attribute>
+    </definition>
+    <definition name="productDetails" extends="base.clientDefinition">
+        <put-attribute name="title" value="Product details"></put-attribute>
+        <put-attribute name="leftMenu" value="/WEB-INF/client/leftMenu.jsp"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/client/productDetails.jsp"></put-attribute>
+    </definition>
+    <definition name="cart" extends="base.clientDefinition">
+        <put-attribute name="title" value="Cart"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/client/cart.jsp"></put-attribute>
+    </definition>
+    <definition name="contact" extends="base.clientDefinition">
+        <put-attribute name="title" value="Contact"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/client/contact.jsp"></put-attribute>
+    </definition>
+    
+    
+    
+    <definition name="base.cmsDefinition" template="/WEB-INF/cms/cmsLayout.jsp">
+        <put-attribute name="cmsTitle" value=""></put-attribute>
+        <put-attribute name="cmsHeader" value="/WEB-INF/cms/cmsHeader.jsp"></put-attribute>
+        <put-attribute name="cmsBody" value=""></put-attribute>
+        <put-attribute name="cmsFooter" value="/WEB-INF/cms/cmsFooter.jsp"></put-attribute>
+    </definition>
+    <definition name="cmsHome" extends="base.cmsDefinition">
+        <put-attribute name="cmsTitle" value="Home Page"></put-attribute>
+        <put-attribute name="cmsBody" value="/WEB-INF/cms/cmsHome.jsp"></put-attribute>
+    </definition>
+    <definition name="cmsProductManagement" extends="base.cmsDefinition">
+        <put-attribute name="cmsTitle" value="Product Management"></put-attribute>
+        <put-attribute name="cmsBody" value="/WEB-INF/cms/cmsProductManagement.jsp"></put-attribute>
+    </definition>
+     <definition name="cmsOneProduct" extends="base.cmsDefinition">
+        <put-attribute name="cmsTitle" value="Product Management"></put-attribute>
+        <put-attribute name="cmsBody" value="/WEB-INF/cms/cmsOneProduct.jsp"></put-attribute>
+    </definition>
+    <definition name="cmsContactPage" extends="base.cmsDefinition">
+        <put-attribute name="cmsTitle" value="Edit Contact Page"></put-attribute>
+        <put-attribute name="cmsBody" value="/WEB-INF/cms/cmsContactPage.jsp"></put-attribute>
+    </definition>
+    <definition name="cmsHomeSlider" extends="base.cmsDefinition">
+        <put-attribute name="cmsTitle" value="Edit Home Slider"></put-attribute>
+        <put-attribute name="cmsBody" value="/WEB-INF/cms/cmsHomeSlideshow.jsp"></put-attribute>
+    </definition>
+    <definition name="cmsViewMessages" extends="base.cmsDefinition">
+        <put-attribute name="cmsTitle" value="View Messages"></put-attribute>
+        <put-attribute name="cmsBody" value="/WEB-INF/cms/cmsViewMessages.jsp"></put-attribute>
+    </definition>
+    
+</tiles-definitions>
