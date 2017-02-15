@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+ <persistence-unit name="persistenceUnitName" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.vasea.entities.Users</class>
+    <class>com.vasea.entities.StatisticBook</class>
+    <class>com.vasea.entities.StatisticAuthor</class>
+     <class>com.vasea.entities.Books</class>
+     <class>com.vasea.entities.Authors</class>
+     <class>com.vasea.entities.Genres</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/library?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="vasea1"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="1111"/>
+<!--       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> -->
+    </properties>
+  </persistence-unit>
+</persistence>

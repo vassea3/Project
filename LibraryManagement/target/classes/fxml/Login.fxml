@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="260.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.LoginController">
+   <children>
+      <Pane layoutX="24.0" layoutY="24.0" prefHeight="214.0" prefWidth="319.0" style="-fx-border-color: #0eb8ea;">
+         <children>
+            <Label layoutX="13.0" layoutY="34.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="88.0" layoutY="32.0" prefHeight="25.0" prefWidth="165.0" />
+            <Label layoutX="13.0" layoutY="80.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password" layoutX="88.0" layoutY="78.0" prefHeight="25.0" prefWidth="165.0" />
+            <ImageView fitHeight="25.0" fitWidth="19.0" layoutX="253.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="253.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Key.png" />
+               </image>
+            </ImageView>
+            <Button id="login" fx:id="login" contentDisplay="RIGHT" layoutX="88.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="70.0" text="Login">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/singin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="handleSingup" alignment="CENTER" layoutX="171.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleSingup" prefHeight="27.0" prefWidth="85.0" text="Singup">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/addUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="14.0" layoutY="171.0" text="Trouble Login...!" textFill="#f80808" />
+            <Button id="forgot" fx:id="forgot" alignment="CENTER_RIGHT" layoutX="120.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleForgot" prefHeight="25.0" prefWidth="130.0" text="Forgot Password">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/forgot.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="18.0" layoutY="-16.0" style="-fx-background-color: #F4F4F4;" text="Login" textFill="#07f288">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameValidat" layoutX="88.0" layoutY="19.0" textFill="#ed1111" />
+            <Label fx:id="passwordValidat" layoutX="88.0" layoutY="64.0" textFill="#ee0404" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

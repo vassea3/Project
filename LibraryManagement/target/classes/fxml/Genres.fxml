@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="372.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.AddGenresController">
+   <children>
+      <Pane layoutX="31.0" layoutY="24.0" prefHeight="325.0" prefWidth="369.0" style="-fx-border-color: green;">
+         <children>
+            <CheckBox fx:id="action" layoutX="41.0" layoutY="33.0" mnemonicParsing="false" text="Action">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="biography" layoutX="41.0" layoutY="67.0" mnemonicParsing="false" text="Biography">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="humour‎" layoutX="42.0" layoutY="197.0" mnemonicParsing="false" text="Humour‎">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="fantasy‎" layoutX="42.0" layoutY="130.0" mnemonicParsing="false" text="Fantasy‎">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="erotica" layoutX="42.0" layoutY="163.0" mnemonicParsing="false" text="Erotica">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="drama‎" layoutX="41.0" layoutY="99.0" mnemonicParsing="false" text="Drama‎">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="comedy‎" layoutX="186.0" layoutY="163.0" mnemonicParsing="false" text="Comedy‎">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="childrenEntertainment‎" layoutX="185.0" layoutY="33.0" mnemonicParsing="false" text="Children's entertainment‎">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="romance‎" layoutX="185.0" layoutY="67.0" mnemonicParsing="false" text="Romance‎">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="scienceFiction" layoutX="185.0" layoutY="99.0" mnemonicParsing="false" text="Science fiction">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="tragedies" layoutX="185.0" layoutY="130.0" mnemonicParsing="false" text="Tragedies">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="nonFiction" layoutX="187.0" layoutY="199.0" mnemonicParsing="false" text="Non-fiction">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="27.0" layoutY="-17.0" style="-fx-background-color: #F4F4F4;" text="Select a genre:" textFill="#09f509">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="save" layoutX="78.0" layoutY="251.0" onAction="#handleSave" mnemonicParsing="false"  prefHeight="26.0" prefWidth="65.0" text="Save">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="back" layoutX="200.0" layoutY="251.0" onAction="#handleBack" mnemonicParsing="false" text="Back">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

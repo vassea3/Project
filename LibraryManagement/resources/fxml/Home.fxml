@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="391.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.HomeController">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="1.0" layoutY="2.0" prefHeight="23.0" prefWidth="607.0" useSystemMenuBar="false" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="itemLogout" mnemonicParsing="false" onAction="#handleLogout" text="Logout">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+              <MenuItem fx:id="itemExit" mnemonicParsing="false" onAction="#handleExit" text="Exit">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="116.0" fitWidth="122.0" layoutX="24.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/libManagement.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="140.0" layoutY="56.0" prefHeight="33.0" prefWidth="137.0" text="Lybrary System " textFill="#eb980a">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="95.0" text="Management" textFill="#eb980a">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="addBook" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="57.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleBookManage" text="Book Management">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/BookManage.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="312.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleStatistic" prefHeight="179.0" prefWidth="166.0" text="Statistic">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/statistic.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="567.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleStudentManage" text="Users Management">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/StudentManage.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

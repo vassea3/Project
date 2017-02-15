@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="474.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.client.ClientAllBooksController">
+   <children>
+      <TableView fx:id="tableBooks" layoutY="39.0" prefHeight="433.0" prefWidth="900.0" style="-fx-border-width: 100%;">
+        <columns>
+          <TableColumn fx:id="nrColumn" prefWidth="40.0" text="Nr." />
+          <TableColumn fx:id="bookNameColumn" prefWidth="237.0" text="Book Name" />
+            <TableColumn fx:id="genresColumn" minWidth="0.0" prefWidth="114.0" text="Genres" />
+            <TableColumn fx:id="editionColumn" prefWidth="75.0" text="Edition" />
+            <TableColumn fx:id="authorColumn" minWidth="8.0" prefWidth="184.0" text="Book Author" />
+            <TableColumn fx:id="file" prefWidth="143.0" text="File" />
+            <TableColumn fx:id="pagesColumn" prefWidth="106.0" text="Number of pages" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="search" layoutX="488.0" layoutY="9.0" prefHeight="25.0" prefWidth="254.0" promptText="Search " />
+      <Button layoutX="766.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleSearch" text="Search">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="showAll" layoutX="128.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleShowAll" text="Show all books" />
+      <Button layoutX="311.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleOpenFile" text="Open file" />
+   </children>
+</AnchorPane>

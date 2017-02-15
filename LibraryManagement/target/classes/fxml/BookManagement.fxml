@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="392.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.BookManagementController">
+   <children>
+      <TabPane prefHeight="392.0" prefWidth="480.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Add new book">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="83.0" layoutY="35.0" prefHeight="308.0" prefWidth="328.0" style="-fx-border-color: blue;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="-17.0" style="-fx-background-color: #F4F4F4;" text="Add new book" textFill="#1bda09">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="29.0" layoutY="39.0" text="Book name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="29.0" layoutY="76.0" text="Author name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="29.0" layoutY="116.0" text="Genre">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="31.0" layoutY="153.0" text="Edition">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="31.0" layoutY="191.0" text="Pages">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="bookName" layoutX="125.0" layoutY="35.0" prefHeight="25.0" prefWidth="193.0" />
+                              <TextField fx:id="authorName" layoutX="126.0" layoutY="74.0" prefHeight="25.0" prefWidth="192.0" />
+                              <TextField fx:id="edition" layoutX="126.0" layoutY="151.0" prefHeight="25.0" prefWidth="192.0" />
+                              <TextField fx:id="pages" layoutX="126.0" layoutY="189.0" prefHeight="25.0" prefWidth="191.0" />
+                              <Button layoutX="94.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleSave" text="Save">
+                                 <graphic>
+                                    <ImageView fitHeight="47.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/save.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="207.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="addGenres" layoutX="126.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleAddGenres" text="Add genres" />
+                              <Label layoutX="29.0" layoutY="225.0" text="Choose file">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="124.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleSelectFile" text="Browse" />
+                           </children>
+                        </Pane>
+                     </children>
+                     </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Edit book">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <children>
+                        <Pane layoutX="81.0" layoutY="23.0" prefHeight="318.0" prefWidth="338.0" style="-fx-border-color: blue;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="-17.0" style="-fx-background-color: #F4F4F4;" text="Edit book" textFill="#1bda09">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="31.0" layoutY="52.0" text="Book name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="29.0" layoutY="89.0" text="Author name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="31.0" layoutY="125.0" text="Genre">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="31.0" layoutY="162.0" text="Edition">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutX="31.0" layoutY="201.0" text="Pages">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="bookNameEdit" layoutX="118.0" layoutY="48.0" prefHeight="25.0" prefWidth="193.0" />
+                              <TextField fx:id="authorNameEdit" layoutX="119.0" layoutY="85.0" prefHeight="25.0" prefWidth="192.0" />
+                              <TextField fx:id="editionEdit" layoutX="119.0" layoutY="158.0" prefHeight="25.0" prefWidth="192.0" />
+                              <TextField fx:id="pagesEdit" layoutX="120.0" layoutY="195.0" prefHeight="25.0" prefWidth="191.0" />
+                              <Button layoutX="86.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleUpdate" text="Edit">
+                                 <graphic>
+                                    <ImageView fitHeight="47.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/save.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="215.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="searchEdit" layoutX="80.0" layoutY="14.0" prefHeight="25.0" prefWidth="168.0" />
+                              <Button layoutX="262.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSearchEdit" text="Search">
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="120.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleAddGenres" text="Chenge genres" />
+                              <Label layoutX="32.0" layoutY="238.0" text="Choose file">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="120.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleSelectFile" text="Browse" />
+                           </children>
+                        </Pane>
+                     </children>
+                     </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Delete book">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="76.0" layoutY="39.0" prefHeight="234.0" prefWidth="325.0" style="-fx-border-color: red;">
+                           <children>
+                              <TextField fx:id="searchDelete" layoutX="14.0" layoutY="45.0" prefHeight="25.0" prefWidth="206.0" />
+                              <Button layoutX="242.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleSearchDelete" text="Search">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label fx:id="bookNameDelete" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="109.0" prefHeight="20.0" prefWidth="301.0" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="91.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/exit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="175.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Label layoutX="87.0" layoutY="22.0" style="-fx-background-color: #F4F4F4;" text="Delete Book" textFill="#eb0303">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

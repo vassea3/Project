@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="402.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.LoadingController">
+   <children>
+      <Pane layoutX="31.0" layoutY="22.0" prefHeight="357.0" prefWidth="327.0" style="-fx-border-color: blue;">
+         <children>
+            <Label layoutX="51.0" layoutY="34.0" text="Library Name" textFill="#0f2ac3">
+               <font>
+                  <Font name="Book Antiqua" size="36.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="progresBar" layoutX="62.0" layoutY="121.0" prefWidth="200.0" progress="0.0" />
+            <Label layoutX="133.0" layoutY="155.0" text="Loading...">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="87.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bookLoading.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="porneste" layoutX="111.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleStart" text="Start application" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

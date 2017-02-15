@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="362.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.StudentManagementController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="360.0" prefWidth="352.0">
+         <children>
+            <TabPane prefHeight="362.0" prefWidth="352.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Add new user">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="325.0" prefWidth="469.0">
+                           <children>
+                              <Label layoutX="28.0" layoutY="50.0" text="Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="25.0" layoutY="83.0" text="Username">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="122.0" text="Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="25.0" layoutY="158.0" text="Repeat password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="25.0" layoutY="200.0" text="Security question">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="24.0" layoutY="241.0" prefHeight="13.0" prefWidth="46.0" text="Answer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="name" layoutX="144.0" layoutY="48.0" />
+                              <TextField fx:id="username" layoutX="144.0" layoutY="81.0" />
+                              <PasswordField fx:id="password" layoutX="144.0" layoutY="120.0" />
+                              <PasswordField fx:id="repeatPassword" layoutX="144.0" layoutY="156.0" />
+                              <ComboBox fx:id="securityQuestion" layoutX="145.0" layoutY="198.0" prefWidth="150.0" promptText="Select a question" />
+                              <TextField fx:id="answer" layoutX="145.0" layoutY="239.0" />
+                              <Button fx:id="back" alignment="CENTER_RIGHT" layoutX="235.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="25.0" prefWidth="64.0" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="create" alignment="CENTER_RIGHT" layoutX="109.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="71.0" text="Create">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/save.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="105.0" layoutY="8.0" style="-fx-background-color: #F4F4F4;" text="New Account" textFill="#10e06d">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nameValidat" layoutX="144.0" layoutY="17.0" textFill="#fc0707" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Edit user">
+                     <content>
+                        <Pane prefHeight="333.0" prefWidth="283.0">
+                           <children>
+                              <TextField fx:id="usernameSearch" layoutX="59.0" layoutY="55.0" promptText="Username" />
+                              <Button layoutX="235.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleSearchEdit" prefHeight="13.0" prefWidth="89.0" text="Search">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="127.0" layoutY="8.0" style="-fx-background-color: #F4F4F4;" text="Edit user" textFill="#20f209">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="97.0" text="Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="131.0" text="Username">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="164.0" text="Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="195.0" text="Repeat password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="35.0" layoutY="227.0" text="Sequrity question">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="260.0" text="Answer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nameEdit" layoutX="161.0" layoutY="95.0" />
+                              <TextField fx:id="usernameEdit" layoutX="160.0" layoutY="128.0" />
+                              <TextField fx:id="passwordEdit" layoutX="161.0" layoutY="161.0" />
+                              <TextField fx:id="repeatPasswordEdit" layoutX="161.0" layoutY="192.0" />
+                              <TextField fx:id="answerEdit" layoutX="161.0" layoutY="257.0" />
+                              <Button layoutX="141.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleSaveEdit" text="Save">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/save.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="240.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="27.0" prefWidth="71.0" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <ComboBox fx:id="questionEdit" layoutX="159.0" layoutY="225.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+                  <Tab text="Delete user">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="119.0" layoutY="35.0" text="Delete account" textFill="#dd0808">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="usernameSerchDelete" layoutX="43.0" layoutY="88.0" promptText="Username" />
+                              <Button layoutX="229.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleSearchDelete" text="Search">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label fx:id="nameDelete" alignment="CENTER" layoutX="12.0" layoutY="143.0" prefHeight="20.0" prefWidth="325.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="usernameDelete" alignment="CENTER" layoutX="13.0" layoutY="173.0" prefHeight="20.0" prefWidth="321.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="91.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="18.0" prefWidth="73.0" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/exit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="204.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </content></Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

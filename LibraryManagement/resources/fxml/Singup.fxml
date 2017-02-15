@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="367.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasea.controllers.admin.SingupController">
+   <children>
+    <AnchorPane layoutX="26.0" layoutY="32.0" minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="345.0" style="-fx-border-color: #0f12e2;">
+         <children>
+            <Label layoutX="27.0" layoutY="37.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="70.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="109.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="145.0" text="Repeat password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="189.0" text="Security question">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="228.0" text="Answer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="144.0" layoutY="35.0" />
+            <TextField fx:id="username" layoutX="144.0" layoutY="68.0" />
+            <PasswordField fx:id="password" layoutX="144.0" layoutY="107.0" />
+            <PasswordField fx:id="repeatPassword" layoutX="144.0" layoutY="143.0" />
+            <ComboBox fx:id="securityQuestion" layoutX="144.0" layoutY="187.0" prefWidth="150.0" promptText="Select a question" />
+            <TextField fx:id="answer" layoutX="145.0" layoutY="226.0" />
+            <Button fx:id="back" alignment="CENTER_RIGHT" layoutX="238.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="25.0" prefWidth="64.0" text="Back">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="create" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="71.0" text="Create">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="27.0" layoutY="-10.0" style="-fx-background-color: #F4F4F4;" text="New Account" textFill="#10e06d">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameValidat" layoutX="144.0" layoutY="17.0" textFill="#fc0707" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
